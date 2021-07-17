@@ -11,18 +11,14 @@
 }
 
 .logo {
-  margin-right: 220px;
+  margin-right: 260px;
 }
 
 .nav_link {
-  padding: 0 100px;
+  margin: 0 50px;
   text-decoration: none;
   color: black;
-  font-size: 15px;
-  line-height: 14px;
-  font-weight: 400;
   letter-spacing: 2px;
-  cursor: pointer;
 }
 
 .line {
@@ -38,4 +34,33 @@
 
 h1, h2, h3, h4, p, a, span {
   font-family: 'Roboto-Regular';
+}
+
+article > .container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.txt_design {
+  width: 355px;
+  height: 174px;
+  font-size: 48px;
+  line-height: 58px;
+  margin-left: 100px;
+  display: inline-block;
+}
+
+.txt_wewe {
+  width: 569px;
+  font-size: 24px;
+  line-height: 40px;
+  display: inline-block;
+  margin-left: 100px;
+  color: #9c9c9c;
+}
+
+.window {
+  display: grid;
+  grid-template-rows: 300px 300px;
+  grid-template-columns: 650px 650px;
 }
