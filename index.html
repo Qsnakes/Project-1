@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="font/fonts.css">
     <link rel="stylesheet" href="slider/chief-slider.min.css">
     <link rel="stylesheet" href="css/phorma_obrat-svyzi.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="js/formx.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -191,33 +193,34 @@
 
 
 
-                <div class="form-wrapper">
+               <div id="results"> </div> <!-- блок с результатами отправки формы можно оформить и поставить на месте формы, если она скрывается -->
+               <form id="formx" onsubmit="call()"> <!--- вызов JavaScript события --->
+               <legend>Оставить заявку</legend> 
+               <label for="name">Ваше имя:</label><input id="name" name="name" value="" type="text"> <!---далее три строчка с полями--->
+               <label for="email">Ваш E-mail:</label><input id="email" name="email" value="" type="text">
+               <label for="phone">Ваш телефон:</label><input id="phone" name="phone" value="" type="text">
+               <input value="Отправить" type="submit"> 
+               </form>
 
-                    <form class="contact-form" id="contact-form_1" method="POST" enctype="multipart/form-data">
-                        <p class="contact-form__title">Оставьте заявку на расчет стоимости</p>
-                        <p class="contact-form__description"></p>
-                        <div class="contact-form__input-wrapper">
-                            <input name="name" type="text" class="contact-form__input contact-form__input_name"
-                                placeholder="Введите ваше имя">
-                            <div class="contact-form__error contact-form__error_name"></div>
-                        </div>
-                        
-                        <div class="contact-form__input-wrapper">
-                            <input name="tel" type="tel" class="contact-form__input contact-form__input_tel"
-                                placeholder="Введите ваш телефон">
-                            <div class="contact-form__error contact-form__error_tel"></div>
-                        </div>
-            
-                        <div class="contact-form__input-wrapper"> 
-                            <input name="email" type="email" class="contact-form__input contact-form__input_email"
-                                placeholder="Введите ваш email">
-                            <div class="contact-form__error contact-form__error_email"></div>
-                        </div>
-            
-                        <button class="contact-form__button" type="submit"> Получить прайс </button>
-                    </form>
-                    
-                </div>
+
+               <script type="text/javascript">
+                function call() {
+                  var msg   = $('#formx').serialize();
+                   $.ajax({
+                     type: 'POST',
+                     url: 'formx.php', //обращаемся к обработчику
+                     data: msg,
+                    success: function(data) {  //в случае успеха выводим результаты в div "results"
+                        $('#formx').remove(); //скрываем форму после отправки 
+                        $('#results').html(data); //показываем сообщение об успехе вместо неё 
+                     },
+                     error:  function(xhr, str){ //ошибка выводит соответствующее сообщение 
+                    alert('Возникла ошибка: ' + xhr.responseCode);
+                     }
+                   });
+               }
+            </script>
+           
            
 
 
@@ -225,16 +228,12 @@
 
 
 
-
+            
             </div>
             
         </footer>
     </div>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/mail.js"></script>
-    <script src="../forma-v1/mail/js/mail.js"></script>
     <script defer src="slider/chief-slider.min.js"></script>
 </body>
 </html>

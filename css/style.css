@@ -5,8 +5,12 @@
 }
 
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 72px;
 }
 
@@ -62,10 +66,15 @@ article > .container {
 
 .window {
   margin-top: 210px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 450px;
-  grid-template-columns: 605px 605px;
+  -ms-grid-rows: 450px;
+      grid-template-rows: 450px;
+  -ms-grid-columns: 605px 605px;
+      grid-template-columns: 605px 605px;
 }
 
 .brand {
@@ -96,16 +105,25 @@ article > .container {
 
 .block_time {
   margin-top: 50px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 310px 310px 310px;
+  -ms-grid-columns: 310px 310px 310px;
+      grid-template-columns: 310px 310px 310px;
 }
 
 .txt_time {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 310px 310px 310px;
-  grid-template-rows: 20px 150px;
-  justify-content: center;
+  -ms-grid-columns: 310px 310px 310px;
+      grid-template-columns: 310px 310px 310px;
+  -ms-grid-rows: 20px 150px;
+      grid-template-rows: 20px 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 40px;
   margin-bottom: 100px;
 }
@@ -141,6 +159,8 @@ article > .container {
 }
 
 .block_sit1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -157,7 +177,10 @@ article > .container {
 }
 
 .block_sit1:nth-child(even) {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .bg_grey {
@@ -211,8 +234,13 @@ article > .container {
 }
 
 .footer_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 300px;
   text-align: left;
   cursor: pointer;
@@ -223,3 +251,4 @@ article > .container {
 .footer_flex > p {
   color: white;
 }
+/*# sourceMappingURL=style.css.map */
