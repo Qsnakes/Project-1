@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="font/fonts.css">
+    <link rel="stylesheet" href="slider/chief-slider.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -46,13 +47,61 @@
 
             <div class="container">
                 <div class="window">
-                    <img src="img/one.png" alt="">
-                    <img src="img/two.png" alt="">
-                    <img src="img/three.png" alt="">
-                    <img src="img/fore.png" alt="">
+                    <div class="win1">
+                      <img src="img/one.png" alt="">   
+                      <span>Phone Booth</span>
+                    </div>
+                    <div class="win2">
+                      <img src="img/two.png" alt="">  
+                      <span>Focus Room</span>
+                    </div>
+                    <div class="win3">
+                      <img src="img/three.png" alt="">  
+                      <span>LMeeting Room</span>
+                    </div>
+                    <div class="win4">
+                       <img src="img/fore.png" alt=""> 
+                       <span>Open Meeting Room</span>
+                    </div>
                 </div>
+            </div>
+
+            <div class="container">
+                <div class="brand">
+                   <h1>The world's leading brands choose ROOM.</h1> 
+                   <p class="over">Over 3,000 and counting.</p>
+                   <img src="img/brand.svg" alt="brand" class="brand_logo">
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- Слайдер -->
+                <div class="slider">
+                    <div class="slider__container">
+                      <div class="slider__wrapper">
+                        <div class="slider__items">
+                          <div class="slider__item">
+                            <img src="img/slider_one.png" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="img/slider_two.png" alt="">
+                          </div>
+                          <div class="slider__item">
+                            <img src="img/slider_three.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                    <a href="#" class="slider__control" data-slide="prev"></a>
+                    <a href="#" class="slider__control" data-slide="next"></a>
+                  </div>
             </div>
         </article>
     </div>
+
+
+
+    <script defer src="slider/chief-slider.min.js"></script>
 </body>
 </html>

@@ -29,7 +29,7 @@
 }
 
 .room {
-  width: 95%;
+  margin-left: -20px;
 }
 
 h1, h2, h3, h4, p, a, span {
@@ -56,11 +56,30 @@ article > .container {
   line-height: 40px;
   display: inline-block;
   margin-left: 100px;
-  color: #9c9c9c;
+  color: grey;
 }
 
 .window {
+  margin-top: 210px;
+  justify-content: center;
   display: grid;
-  grid-template-rows: 300px 300px;
-  grid-template-columns: 650px 650px;
+  grid-template-rows: 450px;
+  grid-template-columns: 605px 605px;
+}
+
+.brand {
+  margin-top: 200px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 48px;
+}
+
+.over {
+  line-height: 36px;
+  font-size: 24px;
+}
+
+.brand_logo {
+  margin-top: 125px;
+  margin-bottom: 150px;
 }
