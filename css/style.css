@@ -202,3 +202,24 @@ article > .container {
   color: white;
   border: none;
 }
+
+.bg-black {
+  margin: 0 auto;
+  background-image: url("../img/bg_black.svg");
+  width: 100%;
+  height: 620px;
+}
+
+.footer_flex {
+  display: flex;
+  flex-direction: column;
+  margin-left: 300px;
+  text-align: left;
+  cursor: pointer;
+  width: 100px;
+  margin-top: 0;
+}
+
+.footer_flex > p {
+  color: white;
+}
